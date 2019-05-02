@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        dockerfile true
+        image 'bobrik/curator'
     }
     
     options{
