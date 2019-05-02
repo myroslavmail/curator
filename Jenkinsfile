@@ -20,7 +20,6 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                sh "apt update && apt-get install -y libltdl7 && apt-get upgrade -y"
                 sh "./myscript.sh -d ${params.Days}"
             }
         }
