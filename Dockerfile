@@ -1,1 +1,1 @@
-FROM bobrik/curator
+FROM alpine
