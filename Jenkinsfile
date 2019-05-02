@@ -1,6 +1,8 @@
 pipeline {
     agent {
-        image 'bobrik/curator'
+        docker {
+            image 'bobrik/curator'
+        }
     }
     
     options{
