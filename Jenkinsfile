@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                sh "/usr/bin/curator_cli --config ./config.yml action.yml"
+                /usr/bin/curator_cli --config ./config.yml action.yml
             }
         }
     }
