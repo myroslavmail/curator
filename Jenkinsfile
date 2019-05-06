@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'bobrik/curator'
+            image 'bobrik/curator:5.7.5'
         }
     }
     
