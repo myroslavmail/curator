@@ -10,8 +10,7 @@ pipeline {
     stages {
         stage('Test') {
             customImage.inside('--entrypoint=/usr/bin/curator_cli')
-            steps
-            {
+            steps {
                 sh "pwd"
             }
         }
