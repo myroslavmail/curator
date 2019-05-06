@@ -10,8 +10,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                sh "chmod +x docker-compose"
-                sh "docker-compose down -v"
+                sh "echo 'Hello wordl'"
             }
         }
     }
