@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'bobrik/curator'
+            image 'openshift/origin-logging-curator'
         }
     }
     
