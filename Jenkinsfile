@@ -12,6 +12,8 @@ pipeline {
     stages {
         stage('Example') {
             steps {
+                sh "ls -la"
+                sh "pwd"
                 sh "docker-compose down -v"
             }
         }
