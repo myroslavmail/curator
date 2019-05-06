@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                sh "echo 'Hello wordl'"
+                sh "/usr/bin/curator_cli"
             }
         }
     }
