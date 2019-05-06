@@ -5,12 +5,6 @@ pipeline {
         }
     }
     
-    options{
-        buildDiscarder(
-            logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '180', numToKeepStr: '')
-        )
-    }
-    
     triggers {
         cron('H H/6 * * *')
     }
@@ -18,7 +12,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                sh "./myscript.sh"
+                sh "curator --config ./config.yml action.yml"
             }
         }
     }
