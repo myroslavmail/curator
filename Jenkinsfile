@@ -1,8 +1,6 @@
 pipeline {
     agent {
-        docker {
-            image 'ventx/curator_cli'
-        }
+        dockerfile true
     }
     
     triggers {
