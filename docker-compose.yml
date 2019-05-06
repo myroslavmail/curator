@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+
+  elasticsearch:
+    image: elasticsearch
+    ports:
+    - 9200:9200/tcp
+
+  curator:
+    image: anjia0532/docker-curator
+    environment:
+        UNIT_COUNT: 90
+        UNIT: days
+        ES_HOST: elasticsearch
+    depends_on:
+      - elasticsearch
+    volumes:
+        - /config/path/to/host/:/config
