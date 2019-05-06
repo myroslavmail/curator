@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'openshift/origin-logging-curator'
+            image 'ventx/curator_cli'
         }
     }
     
