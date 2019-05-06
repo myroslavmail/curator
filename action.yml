@@ -11,5 +11,5 @@ actions:
       source: creation_date
       direction: older
       timestring: '%Y.%m.%d.%H.%M.%S.'
-      unit: hours
-      unit_count: 1
+      unit: ${UNIT:minutes}
+      unit_count: ${UNIT_COUNT:1}
