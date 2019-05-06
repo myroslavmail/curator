@@ -7,11 +7,9 @@ pipeline {
         cron('H H/6 * * *')
     }
     
-    stages {
-        stage('Example') {
-            steps {
-                sh "/usr/bin/curator_cli"
-            }
+    stage('Test') {
+        customImage.inside('--entrypoint=/usr/bin/curator_cli') {
+            sh "pwd"
         }
     }
 }
