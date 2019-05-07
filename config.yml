@@ -1,6 +1,6 @@
 client:
   hosts:
-    - 127.0.0.1:9200
+    - 192.168.63.131:9200
   url_prefix:
   use_ssl: False
   certificate:
