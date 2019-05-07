@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        dockerfile true
-    }
+    
     
     triggers {
         cron('H H/6 * * *')
@@ -10,7 +8,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh "pwd"
+                sh "docker run --rm --name curator --entrypoint curator anjia0532/docker-curator --config /root/Elasticsearch_curator/config.yml /root/Elasticsearch_curator/action.yml"
             }
         }
     }
