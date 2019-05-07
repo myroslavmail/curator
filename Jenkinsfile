@@ -8,7 +8,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh "docker run --rm --name curator --entrypoint curator anjia0532/docker-curator --config ./config.yml ./action.yml"
+                sh "pwd && ls -la"
+                sh "docker run --rm --name curator --entrypoint curator anjia0532/docker-curator --config config.yml action.yml"
             }
         }
     }
