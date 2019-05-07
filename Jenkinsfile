@@ -8,8 +8,10 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh "docker run --rm --name curator --env PYTHONPATH=/usr/local/lib/python3.6 --env PYTHONHOME=/usr/local/lib/python3.6 -v /root/Elasticsearch_curator:/etc/curator -v /usr/local/lib/python3.6:/usr/local/lib/python3.6 --entrypoint curator anjia0532/docker-curator --config /etc/curator/config.yml /etc/curator/action.yml"
+                sh "apt-get update && apt-get install -y python-pip && pip install --upgrade pip"
+                sh "docker run --rm --name curator -v /root/Elasticsearch_curator:/etc/curator --entrypoint curator anjia0532/docker-curator
             }
         }
     }
 }
+# --env PYTHONHOME=/usr/local/lib/python3.6 -v /usr/local/lib/python3.6:/usr/local/lib/python3.6
