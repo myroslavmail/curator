@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'docker run --rm --name curator -v `pwd`:/etc/curator -w /etc/curator --entrypoint curator aroundus/elasticsearch-curator:5.7.5 --config config.yml action.yml'
+                sh 'docker run --rm --name curator -v `pwd`:/etc/curator -w /etc/curator --entrypoint curator aroundus/elasticsearch-curator:5.7.5 --config ./config.yml ./action.yml'
             }
         }
     }
