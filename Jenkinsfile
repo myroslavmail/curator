@@ -8,8 +8,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-             //   sh "apt-get update && apt-get install -y python-pip && pip install --upgrade pip"
-                sh "docker run --rm --name curator -v /root/Elasticsearch_curator:/etc/curator --entrypoint curator anjia0532/docker-curator --config /etc/curator/config.yml /etc/curator/action.yml"
+                sh "docker run --rm --name curator -v /root/Elasticsearch_curator:/etc/curator --entrypoint curator aroundus/elasticsearch-curator:5.7.5 --config /etc/curator/config.yml /etc/curator/action.yml"
             }
         }
     }
