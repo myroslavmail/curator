@@ -14,4 +14,3 @@ pipeline {
         }
     }
 }
-# --env PYTHONHOME=/usr/local/lib/python3.6 -v /usr/local/lib/python3.6:/usr/local/lib/python3.6
